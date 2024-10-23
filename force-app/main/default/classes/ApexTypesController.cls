@@ -1,4 +1,5 @@
 public with sharing class ApexTypesController {
+    /* This method checks if the user entered the sequence of items in the app. nix_ */
     @AuraEnabled(cacheable=true)
     public static String checkApexTypes(CustomWrapper wrapper) {
         // Using System.debug() isn't good practice for production applications.

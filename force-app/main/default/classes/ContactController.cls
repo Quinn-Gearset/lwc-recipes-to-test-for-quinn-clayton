@@ -1,4 +1,5 @@
 public with sharing class ContactController {
+    /* Gets a list of contacts in the system. */
     @AuraEnabled(cacheable=true)
     public static List<Contact> getContactList() {
         return [
@@ -18,6 +19,7 @@ public with sharing class ContactController {
         ];
     }
 
+    /* This method returns a list of contacts that match the specified key. */
     @AuraEnabled(cacheable=true)
     public static List<Contact> findContacts(String searchKey) {
         String key = '%' + searchKey + '%';
@@ -30,6 +32,7 @@ public with sharing class ContactController {
         ];
     }
 
+    /* This method returns a single contact that has a user mode. */
     @AuraEnabled(cacheable=true)
     public static Contact getSingleContact() {
         return [
@@ -40,6 +43,7 @@ public with sharing class ContactController {
         ];
     }
 
+    /* Update the contacts in the database. */
     @AuraEnabled
     public static void updateContacts(List<Contact> contactsForUpdate) {
         // Make sure we can update the database before trying to update
@@ -51,6 +55,7 @@ public with sharing class ContactController {
         update contactsForUpdate;
     }
 
+    /* Method updateContact. */
     @AuraEnabled
     public static void updateContact(
         Id recordId,
