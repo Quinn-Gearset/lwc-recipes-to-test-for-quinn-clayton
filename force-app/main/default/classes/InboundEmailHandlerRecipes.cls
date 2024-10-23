@@ -16,7 +16,7 @@
  * @see FilesRecipes
  */
 @SuppressWarnings('PMD.ApexSharingViolations')
-public class InboundEmailHandlerRecipes implements Messaging.InboundEmailHandler {
+public inherited sharing class InboundEmailHandlerRecipes implements Messaging.InboundEmailHandler {
     public class InboundEmailHandlerRecipesException extends Exception {
     }
     /**
