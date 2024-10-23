@@ -6,6 +6,7 @@ public with sharing class LMSVisualforceController {
         this.contactRecord = new Contact();
     }
 
+    /* Refresh the contact record. */
     public PageReference refreshContact() {
         Id contactId = ApexPages.currentPage().getParameters().get('Id');
 

@@ -1,5 +1,6 @@
 @isTest
 public class TestAccountController {
+    /* create accounts. */
     public static List<Account> createAccounts(Integer amount) {
         List<Account> accounts = new List<Account>();
 

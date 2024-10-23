@@ -1,5 +1,6 @@
 @isTest
 public with sharing class TestContactController {
+    /* Create contacts. */
     public static void createContacts(Integer amount) {
         List<Contact> contacts = new List<Contact>();
 
@@ -16,6 +17,7 @@ public with sharing class TestContactController {
         insert contacts;
     }
 
+    /* Create a user object from a profile name. */
     public static User createUser(String profile) {
         //Create Test User
         return new User(
@@ -73,6 +75,7 @@ public with sharing class TestContactController {
         );
     }
 
+    /* Update contact list. */
     @isTest
     public static void updateContactList() {
         TestContactController.createContacts(2);
@@ -91,6 +94,7 @@ public with sharing class TestContactController {
         );
     }
 
+    /* Method updateContactListNegative. */
     @isTest
     public static void updateContactListNegative() {
         TestContactController.createContacts(2);
