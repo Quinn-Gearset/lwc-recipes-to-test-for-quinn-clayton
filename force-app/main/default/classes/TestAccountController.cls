@@ -19,7 +19,7 @@ public class TestAccountController {
         List<Account> accts = AccountController.getAccountList();
         Test.stopTest();
 
-        Assert.areEqual(10, accts.size());
+        Assert.areEqual(10, accts.size(), 'Asserts that the number of accts is equal to 10.');
     }
 
     @isTest
@@ -30,7 +30,7 @@ public class TestAccountController {
         Integer accountNumber = AccountController.getTotalNumber();
         Test.stopTest();
 
-        Assert.areEqual(10, accountNumber);
+        Assert.areEqual(10, accountNumber, 'Asserts that the account number is equal to 10.');
     }
 
     @isTest
@@ -41,7 +41,7 @@ public class TestAccountController {
         Account acc = AccountController.getSingleAccount();
         Test.stopTest();
 
-        Assert.areEqual('Name 1', acc.Name);
+        Assert.areEqual('Name 1', acc.Name, 'Assert that Name 1 is equal to acc. Name');
     }
 
     @isTest
@@ -59,7 +59,7 @@ public class TestAccountController {
             WHERE Id = :acc.Id
             LIMIT 1
         ];
-        Assert.areNotEqual(originalEmployeeCount, acc.NumberOfEmployees);
+        Assert.areNotEqual(originalEmployeeCount, acc.NumberOfEmployees, 'Assert that original EmployeeCount is not equal to number of Employees.');
     }
 
     @isTest
